@@ -2,171 +2,189 @@
 
 A premium, glassmorphism-style portfolio website showcasing professional modeling, social media management, and voice-over services.
 
-## Features
+## 🚀 Quick Start
 
-- ✨ Premium glassmorphism UI design
-- 📱 Fully responsive across all devices
-- 🎨 Smooth animations and transitions
-- 🖼️ Image gallery with lightbox
-- 🎵 Audio player for voice-over demos
-- 📧 Contact form with validation
-- 🚀 Optimized for performance (Lighthouse 90+)
+### Prerequisites
+- Node.js 24.x or higher ([Download here](https://nodejs.org/))
 
-## Tech Stack
+### Installation & Setup
 
-- **Framework**: Quasar Framework (Vue 3)
-- **Styling**: SCSS with custom glassmorphism effects
-- **Icons**: Font Awesome 6
-- **Fonts**: Playfair Display & Poppins
-- **Build Tool**: Vite
-
-## Project Structure
-
-```
-├── src/
-│   ├── layouts/
-│   │   └── MainLayout.vue       # Main layout with header & footer
-│   ├── pages/
-│   │   ├── HomePage.vue         # Landing page
-│   │   ├── AboutPage.vue        # About section
-│   │   ├── ServicesPage.vue     # Services offered
-│   │   ├── PortfolioPage.vue    # Portfolio showcase
-│   │   ├── ContactPage.vue      # Contact information & form
-│   │   └── ErrorNotFound.vue    # 404 page
-│   ├── router/
-│   │   └── index.js             # Vue Router configuration
-│   ├── css/
-│   │   └── app.scss             # Global styles
-│   ├── App.vue                  # Root component
-│   └── main.js                  # Application entry point
-├── index.html                   # HTML template
-├── package.json                 # Dependencies
-└── quasar.config.js            # Quasar configuration
-```
-
-## Installation
-
-1. Install dependencies:
+1. **Install dependencies:**
 ```bash
 npm install
 ```
 
-2. Start development server:
+2. **Add your content:**
+   - Place images in `public/images/` folder
+   - Place audio files in `public/audio/` folder
+
+3. **Run development server:**
 ```bash
 npm run dev
 ```
+Opens at: http://localhost:9000
 
-3. Build for production:
+4. **Build for production:**
 ```bash
 npm run build
 ```
+Output: `dist/spa/` folder
 
-## Pages
+## 📁 Project Structure
 
-### Home
-- Hero section with professional portrait
-- Quick bio
-- Core competencies showcase
-- Modeling gallery
-- Social media stats
-- Voice-over demos
-- Testimonials section
-- Call-to-action
+```
+portfolio/
+├── src/
+│   ├── layouts/MainLayout.vue       # Header & footer
+│   ├── pages/
+│   │   ├── HomePage.vue             # Landing page
+│   │   ├── AboutPage.vue            # About section
+│   │   ├── ServicesPage.vue         # Services offered
+│   │   ├── PortfolioPage.vue        # Portfolio showcase
+│   │   └── ContactPage.vue          # Contact form
+│   ├── router/index.js              # Routes
+│   └── css/app.scss                 # Global styles
+├── public/
+│   ├── images/                      # Your images
+│   └── audio/                       # Voice-over demos
+└── package.json
+```
 
-### About
-- Professional biography
-- Skill progress bars
-- Mission statement
-- Core values
+## 🖼️ Adding Your Content
 
-### Services
-- Modeling services
-- Social media management
-- Voice-over services
-- Work process
-- Why choose section
+### Images
+Place your images in these locations:
 
-### Portfolio
-- Filterable portfolio (All/Modeling/Social/Voice)
-- Image gallery with lightbox
-- Social media project showcases
-- Voice-over demo players
+```
+public/images/
+├── hero-portrait.jpeg               # Main hero image
+├── WhatsApp Image 2026-02-25...     # Portfolio images
+└── ttyt.jpg
+```
 
-### Contact
-- Contact information
-- Email, phone, Instagram links
-- Contact form with validation
-- Quick navigation links
+**Image Guidelines:**
+- Format: JPG or WebP
+- Hero image: 800x1000px recommended
+- Portfolio images: 800-1200px width
+- Compress images before uploading (use TinyPNG.com)
+- Keep under 500KB per image
 
-## Customization
-
-### Adding Images
-Place your images in the `public/images/` directory:
-- `/images/hero-portrait.jpg` - Hero section portrait
-- `/images/about-portrait.jpg` - About page portrait
-- `/images/modeling/` - Modeling portfolio images
-- `/images/social/` - Social media project screenshots
-
-### Adding Audio Files
+### Audio Files
 Place voice-over demos in `public/audio/`:
-- `/audio/demo-1.mp3`
-- `/audio/demo-2.mp3`
-- etc.
 
-### Color Customization
-Edit CSS variables in `src/css/app.scss`:
+```
+public/audio/
+├── Awwww.mp3.mpeg
+└── Spiderman.mp3.mpeg
+```
+
+**Audio Guidelines:**
+- Format: MP3
+- Bitrate: 128-192 kbps
+- Duration: 30-60 seconds
+- Keep under 5MB per file
+
+## 🎨 Customization
+
+### Update Colors
+Edit `src/css/app.scss`:
 ```scss
 :root {
-  --primary-color: #1e1b4b;
-  --accent-color: #a78bfa;
-  --accent-neon: #c4b5fd;
+  --primary-color: #000000;
+  --accent-color: #c0c0c0;
+  --accent-silver: #e8e8e8;
 }
 ```
 
-## Performance Optimization
+### Update Content
+Edit the page files in `src/pages/`:
+- `HomePage.vue` - Hero, skills, gallery
+- `AboutPage.vue` - Biography, skills
+- `ServicesPage.vue` - Service offerings
+- `PortfolioPage.vue` - Portfolio items
+- `ContactPage.vue` - Contact info
 
-- WebP image format support
-- Lazy loading for images
-- Minified CSS & JS
-- Optimized fonts loading
-- Smooth animations with CSS transforms
+### Contact Information
+Already configured in `ContactPage.vue`:
+- Email: hiqmatmusa555@gmail.com
+- Phone: 0903 363 7808 / 0912 767 9128
+- Instagram: [@hiqmahlitla](https://www.instagram.com/hiqmahlitla)
 
-## SEO
+## 🚀 Deployment
 
-- Semantic HTML structure
-- Meta tags for social sharing
-- Open Graph tags
-- Structured data (Person schema)
-- Optimized page titles and descriptions
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## Deployment
-
-### Vercel
-```bash
-npm run build
-# Deploy dist/spa folder to Vercel
-```
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Settings:
+   - Framework: Quasar
+   - Build command: `npm run build`
+   - Output directory: `dist/spa`
+4. Deploy!
 
 ### Netlify
+1. Push code to GitHub
+2. Import project in [Netlify](https://netlify.com)
+3. Settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist/spa`
+4. Deploy!
+
+## ✨ Features
+
+- Premium glassmorphism UI design
+- Fully responsive (mobile, tablet, desktop)
+- Smooth animations and transitions
+- Image gallery with lightbox
+- Audio players for voice-over demos
+- Contact form with validation
+- SEO optimized
+- Performance optimized (Lighthouse 90+)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Quasar (Vue 3)
+- **Styling**: SCSS with glassmorphism effects
+- **Icons**: Font Awesome 6
+- **Fonts**: Playfair Display & Poppins
+- **Build Tool**: Vite
+
+## 🔧 Troubleshooting
+
+### Images not showing
+- Check files are in `public/images/` folder
+- Verify file names match exactly (case-sensitive)
+- Clear browser cache (Ctrl+Shift+R)
+
+### Port already in use
+- Quasar will auto-select another port
+- Or specify: `npm run dev -- --port 3000`
+
+### Build fails
 ```bash
-npm run build
-# Deploy dist/spa folder to Netlify
+# Clean reinstall
+rm -rf node_modules package-lock.json
+npm install
 ```
 
-## Contact Information
+### Audio not playing
+- Use MP3 format
+- Check file paths start with `/audio/`
+- Verify files are under 10MB
+
+## 📊 Performance Optimizations
+
+- Minified CSS & JS
+- Gzip compression enabled
+- Image lazy loading
+- CSS extraction
+- Preloading critical assets
+- Optimized animations
+
+## 📞 Support
 
 - **Email**: hiqmatmusa555@gmail.com
-- **Phone**: 0903 363 7808 / 0912 767 9128
-- **Instagram**: [@hiqmahlitla](https://www.instagram.com/hiqmahlitla?igsh=MXVuZmFrbnV1OW1jYQ==)
+- **Instagram**: [@hiqmahlitla](https://www.instagram.com/hiqmahlitla)
 
-## License
+## 📝 License
 
 © 2024 Musa Hiqma Oyiza. All rights reserved.
