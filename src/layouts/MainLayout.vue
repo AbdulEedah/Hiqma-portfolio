@@ -201,28 +201,47 @@ export default {
 }
 
 .glass-drawer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%) !important;
   backdrop-filter: blur(30px) saturate(200%);
   border-left: 1px solid rgba(255, 255, 255, 0.15);
+  
+  :deep(.q-drawer__content) {
+    background: transparent !important;
+  }
 }
 
 .mobile-nav {
   padding: 20px 0;
   
   .q-item {
-    color: white;
+    color: white !important;
     margin: 8px 16px;
     border-radius: 12px;
     transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.05rem;
+    
+    :deep(.q-item__section) {
+      color: white !important;
+    }
     
     &:hover {
       background: rgba(192, 192, 192, 0.15);
+      color: #e8e8e8 !important;
+      
+      :deep(.q-item__section) {
+        color: #e8e8e8 !important;
+      }
     }
     
     &.active-item {
       background: rgba(232, 232, 232, 0.2);
-      color: #e8e8e8;
+      color: #e8e8e8 !important;
       border-left: 3px solid #c0c0c0;
+      
+      :deep(.q-item__section) {
+        color: #e8e8e8 !important;
+      }
     }
   }
 }
