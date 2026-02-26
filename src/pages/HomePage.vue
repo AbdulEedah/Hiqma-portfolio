@@ -36,6 +36,8 @@
                 src="/images/hero-portrait.jpeg"
                 alt="Musa Hiqma Oyiza - Professional Model"
                 class="hero-image"
+                loading="eager"
+                fetchpriority="high"
                 @error="handleImageError"
               />
             </div>
@@ -271,9 +273,7 @@ export default {
       { src: '/images/WhatsApp Image 2026-02-25 at 4.35.29 AM.jpeg', alt: 'Professional Portrait 1' },
       { src: '/images/WhatsApp Image 2026-02-25 at 4.35.29 AM (1).jpeg', alt: 'Professional Portrait 2' },
       { src: '/images/WhatsApp Image 2026-02-25 at 4.35.29 AM (2).jpeg', alt: 'Professional Portrait 3' },
-      { src: '/images/WhatsApp Image 2026-02-25 at 4.35.30 AM.jpeg', alt: 'Professional Portrait 4' },
-      { src: '/images/WhatsApp Image 2026-02-25 at 4.35.31 AM.jpeg', alt: 'Professional Portrait 5' },
-      { src: '/images/WhatsApp Image 2026-02-25 at 4.35.31 AM (1).jpeg', alt: 'Professional Portrait 6' }
+      { src: '/images/WhatsApp Image 2026-02-25 at 4.35.30 AM.jpeg', alt: 'Professional Portrait 4' }
     ]
 
     const socialStats = [
@@ -298,17 +298,12 @@ export default {
       {
         title: 'Commercial Voice-Over',
         description: 'Professional brand commercial with engaging tone',
-        audio: '/audio/demo-1.mp3'
+        audio: '/audio/Awwww.mp3.mpeg'
       },
       {
         title: 'Social Media Ad',
         description: 'Dynamic social media advertisement voice work',
-        audio: '/audio/demo-2.mp3'
-      },
-      {
-        title: 'Brand Narration',
-        description: 'Elegant brand story narration with emotional depth',
-        audio: '/audio/demo-3.mp3'
+        audio: '/audio/Spiderman.mp3.mpeg'
       }
     ]
 

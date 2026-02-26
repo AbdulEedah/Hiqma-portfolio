@@ -14,7 +14,17 @@ module.exports = configure(function (ctx) {
         browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
         node: 'node16'
       },
-      vueRouterMode: 'hash'
+      vueRouterMode: 'hash',
+      minify: true,
+      extractCSS: true,
+      gzip: true,
+      analyze: false,
+      vitePlugins: [
+        ['vite-plugin-compression', {
+          algorithm: 'gzip',
+          ext: '.gz'
+        }]
+      ]
     },
     devServer: {
       open: true,

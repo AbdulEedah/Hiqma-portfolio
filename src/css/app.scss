@@ -37,12 +37,18 @@ body {
       radial-gradient(circle at 80% 70%, rgba(232, 232, 232, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
+    will-change: transform;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
+}
+
+// Performance optimizations
+img {
+  content-visibility: auto;
 }
 
 // Glassmorphism Utilities
@@ -58,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 
   // Glassy texture overlay with silver tones
   &::before {
