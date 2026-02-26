@@ -17,10 +17,10 @@
           indicator-color="primary"
         >
           <q-route-tab to="/" label="Home" exact />
-          <q-route-tab to="about" label="About" />
-          <q-route-tab to="services" label="Services" />
-          <q-route-tab to="portfolio" label="Portfolio" />
-          <q-route-tab to="contact" label="Contact" />
+          <q-route-tab to="/about" label="About" />
+          <q-route-tab to="/services" label="Services" />
+          <q-route-tab to="/portfolio" label="Portfolio" />
+          <q-route-tab to="/contact" label="Contact" />
         </q-tabs>
 
         <!-- Mobile Menu Button -->
@@ -56,7 +56,7 @@
         <q-item 
           clickable 
           v-ripple 
-          @click="navigateTo('about')" 
+          @click="navigateTo('/about')" 
           :class="{ 'active-item': $route.path === '/about' }"
         >
           <q-item-section>About</q-item-section>
@@ -64,7 +64,7 @@
         <q-item 
           clickable 
           v-ripple 
-          @click="navigateTo('services')" 
+          @click="navigateTo('/services')" 
           :class="{ 'active-item': $route.path === '/services' }"
         >
           <q-item-section>Services</q-item-section>
@@ -72,7 +72,7 @@
         <q-item 
           clickable 
           v-ripple 
-          @click="navigateTo('portfolio')" 
+          @click="navigateTo('/portfolio')" 
           :class="{ 'active-item': $route.path === '/portfolio' }"
         >
           <q-item-section>Portfolio</q-item-section>
@@ -80,7 +80,7 @@
         <q-item 
           clickable 
           v-ripple 
-          @click="navigateTo('contact')" 
+          @click="navigateTo('/contact')" 
           :class="{ 'active-item': $route.path === '/contact' }"
         >
           <q-item-section>Contact</q-item-section>

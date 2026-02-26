@@ -141,7 +141,7 @@
             size="lg"
             class="cta-button"
             label="Start a Project"
-            @click="$router.push('contact')"
+            @click="$router.push('/contact')"
           />
         </div>
       </div>

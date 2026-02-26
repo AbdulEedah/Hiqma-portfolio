@@ -121,7 +121,7 @@
             size="lg"
             class="cta-button"
             label="Get in Touch"
-            @click="$router.push('contact')"
+            @click="$router.push('/contact')"
           />
         </div>
       </div>
@@ -130,8 +130,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-
 export default {
   name: 'AboutPage',
   setup() {

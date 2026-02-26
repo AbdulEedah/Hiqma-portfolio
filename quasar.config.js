@@ -1,6 +1,6 @@
 const { configure } = require('quasar/wrappers');
 
-module.exports = configure(function (ctx) {
+module.exports = configure(function (/* ctx */) {
   return {
     boot: ['axios'],
     css: ['app.scss'],

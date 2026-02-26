@@ -230,13 +230,13 @@ export default {
         icon: 'fas fa-briefcase',
         title: 'Services',
         description: 'Explore the services I offer',
-        path: 'services'
+        path: '/services'
       },
       {
         icon: 'fas fa-images',
         title: 'Portfolio',
         description: 'View my work and past projects',
-        path: 'portfolio'
+        path: '/portfolio'
       }
     ]
 

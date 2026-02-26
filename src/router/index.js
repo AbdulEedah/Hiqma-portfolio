@@ -7,10 +7,10 @@ const routes = [
     component: MainLayout,
     children: [
       { path: '', name: 'home', component: () => import('../pages/HomePage.vue') },
-      { path: 'about', name: 'about', component: () => import('../pages/AboutPage.vue') },
-      { path: 'services', name: 'services', component: () => import('../pages/ServicesPage.vue') },
-      { path: 'portfolio', name: 'portfolio', component: () => import('../pages/PortfolioPage.vue') },
-      { path: 'contact', name: 'contact', component: () => import('../pages/ContactPage.vue') }
+      { path: '/about', name: 'about', component: () => import('../pages/AboutPage.vue') },
+      { path: '/services', name: 'services', component: () => import('../pages/ServicesPage.vue') },
+      { path: '/portfolio', name: 'portfolio', component: () => import('../pages/PortfolioPage.vue') },
+      { path: '/contact', name: 'contact', component: () => import('../pages/ContactPage.vue') }
     ]
   },
   {

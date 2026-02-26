@@ -146,7 +146,7 @@
               size="lg"
               class="cta-button primary-btn"
               label="Contact Me"
-              @click="$router.push('contact')"
+              @click="$router.push('/contact')"
             />
             <q-btn
               outline
@@ -154,7 +154,7 @@
               size="lg"
               class="cta-button secondary-btn"
               label="View Portfolio"
-              @click="$router.push('portfolio')"
+              @click="$router.push('/portfolio')"
             />
           </div>
         </div>
