@@ -198,6 +198,22 @@ export default {
 
 .mobile-menu-btn {
   color: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(192, 192, 192, 0.1) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(192, 192, 192, 0.2) 100%);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  :deep(.q-icon) {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  }
 }
 
 .glass-drawer {
