@@ -217,9 +217,10 @@ export default {
 }
 
 .glass-drawer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 240, 240, 0.95) 100%) !important;
   backdrop-filter: blur(30px) saturate(200%);
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
   
   :deep(.q-drawer__content) {
     background: transparent !important;
@@ -230,33 +231,42 @@ export default {
   padding: 20px 0;
   
   .q-item {
-    color: white !important;
+    color: #1a1a1a !important;
     margin: 8px 16px;
     border-radius: 12px;
     transition: all 0.3s ease;
-    font-weight: 500;
-    font-size: 1.05rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     
     :deep(.q-item__section) {
-      color: white !important;
+      color: #1a1a1a !important;
     }
     
     &:hover {
-      background: rgba(192, 192, 192, 0.15);
-      color: #e8e8e8 !important;
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.3) 0%, rgba(160, 160, 160, 0.25) 100%);
+      color: #000000 !important;
+      border-color: rgba(0, 0, 0, 0.15);
+      transform: translateX(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       
       :deep(.q-item__section) {
-        color: #e8e8e8 !important;
+        color: #000000 !important;
       }
     }
     
     &.active-item {
-      background: rgba(232, 232, 232, 0.2);
-      color: #e8e8e8 !important;
-      border-left: 3px solid #c0c0c0;
+      background: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+      color: #ffffff !important;
+      border-left: 4px solid #808080;
+      border-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
       
       :deep(.q-item__section) {
-        color: #e8e8e8 !important;
+        color: #ffffff !important;
       }
     }
   }
