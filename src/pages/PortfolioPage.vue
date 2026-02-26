@@ -202,28 +202,28 @@ export default {
 
     const socialProjects = [
       {
-        title: 'Fashion Brand Growth',
-        description: 'Managed social media strategy resulting in 300% follower increase and 250% engagement boost.',
-        image: '/images/social/project-1.jpg',
-        followers: '+15K',
-        engagement: '+250%',
-        growth: '300%'
+        title: 'FLINT Community',
+        description: 'Community-focused social media management with tagline "Live it, Ride it and Explore it." Built engaged community of 956 followers with consistent content strategy.',
+        image: '/images/flint.jpeg',
+        followers: '956',
+        engagement: '151 posts',
+        growth: '115 following'
       },
       {
-        title: 'Beauty Brand Launch',
-        description: 'Complete social media launch strategy with content planning and influencer collaboration.',
-        image: '/images/social/project-2.jpg',
-        followers: '+8K',
-        engagement: '+180%',
-        growth: '220%'
+        title: 'Arya Women Nigeria',
+        description: 'Leading platform in Africa supporting women founders and investors. Managed content strategy for accessing smart funding and building investment portfolios in Abuja, Nigeria.',
+        image: '/images/ayra women nigeria.jpeg',
+        followers: '561',
+        engagement: '12 posts',
+        growth: '96 following'
       },
       {
-        title: 'Lifestyle Brand Revamp',
-        description: 'Brand repositioning and content strategy overhaul for established lifestyle brand.',
-        image: '/images/social/project-3.jpg',
-        followers: '+12K',
-        engagement: '+200%',
-        growth: '280%'
+        title: 'Creamy Creation KN',
+        description: 'Verified entrepreneur account for premium milkcake business in Kano. Scaled to 19.4K followers through strategic content showcasing bubble tea, cake slices, tiramisu, and online baking classes.',
+        image: '/images/creamy creation.jpeg',
+        followers: '19.4K',
+        engagement: '628 posts',
+        growth: '1,772 following'
       }
     ]
 
