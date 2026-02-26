@@ -2,7 +2,7 @@ const { configure } = require('quasar/wrappers');
 
 module.exports = configure(function (/* ctx */) {
   return {
-    boot: ['axios'],
+    boot: [],
     css: ['app.scss'],
     extras: [
       'roboto-font',
@@ -18,13 +18,7 @@ module.exports = configure(function (/* ctx */) {
       minify: true,
       extractCSS: true,
       gzip: true,
-      analyze: false,
-      vitePlugins: [
-        ['vite-plugin-compression', {
-          algorithm: 'gzip',
-          ext: '.gz'
-        }]
-      ]
+      analyze: false
     },
     devServer: {
       open: true,
@@ -36,35 +30,6 @@ module.exports = configure(function (/* ctx */) {
       config: {},
       plugins: ['Notify', 'Loading', 'Dialog']
     },
-    animations: 'all',
-    ssr: {
-      pwa: false,
-      prodPort: 3000,
-      middlewares: [
-        'render'
-      ]
-    },
-    pwa: {
-      workboxMode: 'generateSW',
-      injectPwaMetaTags: true,
-      swFilename: 'sw.js',
-      manifestFilename: 'manifest.json',
-      useCredentialsForManifestTag: false
-    },
-    cordova: {},
-    capacitor: {
-      hideSplashscreen: true
-    },
-    electron: {
-      inspectPort: 5858,
-      bundler: 'packager',
-      packager: {},
-      builder: {
-        appId: 'musa-hiqma-portfolio'
-      }
-    },
-    bex: {
-      contentScripts: ['my-content-script']
-    }
+    animations: []
   }
 });
