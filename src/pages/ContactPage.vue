@@ -215,7 +215,6 @@ export default {
     const serviceOptions = [
       'Modeling Services',
       'Social Media Management',
-      'Voice-Over Services',
       'General Inquiry'
     ]
 

@@ -97,7 +97,7 @@
       <div class="container footer-content">
         <div class="footer-section">
           <h3 class="footer-title">Musa Hiqma Oyiza</h3>
-          <p class="footer-subtitle">Model | Social Media Manager | Voice-Over Artist</p>
+          <p class="footer-subtitle">Model | Social Media Manager</p>
         </div>
         
         <div class="footer-section">

@@ -62,31 +62,6 @@
               @click="openContactForm('Social Media Management')"
             />
           </div>
-
-          <!-- Voice-Over Services -->
-          <div class="glass-card service-card fade-in-up" style="animation-delay: 0.3s">
-            <div class="service-icon">
-              <i class="fas fa-microphone"></i>
-            </div>
-            <h2 class="service-title gradient-text">Voice-Over Services</h2>
-            <p class="service-description">
-              Professional voice delivery with emotional depth and tonal precision.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> Commercial voice-over</li>
-              <li><i class="fas fa-check"></i> Social media ads</li>
-              <li><i class="fas fa-check"></i> Brand promos</li>
-              <li><i class="fas fa-check"></i> Narration</li>
-              <li><i class="fas fa-check"></i> Character voice</li>
-            </ul>
-            <q-btn
-              unelevated
-              rounded
-              class="service-btn"
-              label="Request Quote"
-              @click="openContactForm('Voice-Over')"
-            />
-          </div>
         </div>
       </div>
     </section>
@@ -285,8 +260,8 @@ export default {
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 60px;
-  max-width: 1200px;
+  gap: 40px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -306,21 +281,15 @@ export default {
   }
   
   &:nth-child(2) {
-    animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-  }
-  
-  &:nth-child(3) {
     animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.25s;
     opacity: 0;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     perspective: 1000px;
   }
@@ -329,32 +298,24 @@ export default {
     transform-style: preserve-3d;
     
     &:nth-child(1) {
-      transform: rotate(-2deg) translateY(-10px);
+      transform: translateY(-5px);
       
       &:hover {
-        transform: rotate(0deg) translateY(-18px) scale(1.03);
+        transform: translateY(-15px) scale(1.02);
       }
     }
     
     &:nth-child(2) {
-      transform: translateY(10px);
+      transform: translateY(-5px);
       
       &:hover {
-        transform: translateY(-8px) scale(1.03);
-      }
-    }
-    
-    &:nth-child(3) {
-      transform: rotate(2deg) translateY(-10px);
-      
-      &:hover {
-        transform: rotate(0deg) translateY(-18px) scale(1.03);
+        transform: translateY(-15px) scale(1.02);
       }
     }
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 899px) {
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 600px;

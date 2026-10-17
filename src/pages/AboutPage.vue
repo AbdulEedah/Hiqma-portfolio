@@ -26,18 +26,18 @@
           <div class="bio-content fade-in-up">
             <h2 class="gradient-text bio-title">Professional Journey</h2>
             <p class="bio-paragraph">
-              Musa Hiqma Oyiza is a professional model, digital brand strategist, and voice-over artist 
+              Musa Hiqma Oyiza is a professional model and digital brand strategist 
               dedicated to helping brands communicate with clarity, elegance, and measurable impact.
             </p>
             <p class="bio-paragraph">
-              She combines visual presence, strategic thinking, and vocal expression to elevate brands 
+              She combines visual presence, strategic thinking, and creative storytelling to elevate brands 
               in competitive digital environments. With a passion for storytelling and brand growth, 
               Hiqma brings authenticity and professionalism to every project.
             </p>
             <p class="bio-paragraph">
               Her multifaceted approach ensures that brands not only look exceptional but also connect 
-              meaningfully with their target audiences through strategic social media management and 
-              compelling voice-over work.
+              meaningfully with their target audiences through creative visual storytelling and 
+              strategic social media management.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@
           </div>
           <h2 class="mission-title gradient-text">Mission Statement</h2>
           <p class="mission-text">
-            To create visual and vocal experiences that elevate brands and build authentic digital connections.
+            To create compelling visual and digital experiences that elevate brands and build authentic connections.
           </p>
         </div>
       </div>
@@ -112,8 +112,7 @@
         <div class="glass-card cta-card">
           <h2 class="cta-title">Ready to Collaborate?</h2>
           <p class="cta-description">
-            Let's bring your brand vision to life with professional modeling, strategic social media management, 
-            and captivating voice-over work.
+            Let's bring your brand vision to life with professional modeling and strategic social media management.
           </p>
           <q-btn
             unelevated
@@ -135,7 +134,7 @@ export default {
   setup() {
     const skills = [
       { name: 'Communication Skills', percentage: 95 },
-      { name: 'Voice-Over Performance', percentage: 90 },
+      { name: 'Brand Storytelling', percentage: 92 },
       { name: 'Emotional Intelligence', percentage: 92 },
       { name: 'Adaptability', percentage: 93 },
       { name: 'Team Collaboration', percentage: 94 },

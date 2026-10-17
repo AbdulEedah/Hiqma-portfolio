@@ -5,7 +5,7 @@
       <div class="banner-overlay"></div>
       <div class="container banner-content">
         <h1 class="page-title fade-in-up">Portfolio</h1>
-        <p class="page-subtitle fade-in-up">Explore my work across modeling, social media, and voice-over</p>
+        <p class="page-subtitle fade-in-up">Explore my work across modeling and social media management</p>
       </div>
     </section>
 
@@ -22,7 +22,6 @@
           <q-tab name="all" label="All Work" />
           <q-tab name="modeling" label="Modeling" />
           <q-tab name="social" label="Social Media" />
-          <q-tab name="voice" label="Voice-Over" />
         </q-tabs>
       </div>
     </section>
@@ -98,32 +97,6 @@
           </div>
         </div>
 
-        <!-- Voice-Over Tab -->
-        <div v-show="activeTab === 'all' || activeTab === 'voice'" class="portfolio-section">
-          <h2 v-if="activeTab === 'all'" class="category-title gradient-text">Voice-Over Projects</h2>
-          <div class="voice-grid">
-            <div
-              v-for="(project, index) in voiceProjects"
-              :key="'voice-' + index"
-              class="glass-card voice-card fade-in-up"
-              :style="{ animationDelay: `${index * 0.1}s` }"
-            >
-              <div class="voice-icon">
-                <i class="fas fa-microphone"></i>
-              </div>
-              <h3 class="voice-title">{{ project.title }}</h3>
-              <p class="voice-category">{{ project.category }}</p>
-              <p class="voice-description">{{ project.description }}</p>
-              <audio controls class="audio-player">
-                <source :src="project.audio" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <div class="voice-tags">
-                <span v-for="(tag, i) in project.tags" :key="i" class="tag">{{ tag }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -227,37 +200,6 @@ export default {
       }
     ]
 
-    const voiceProjects = [
-      {
-        title: 'Luxury Brand Commercial',
-        category: 'Commercial',
-        description: 'Elegant and sophisticated voice-over for high-end luxury brand campaign.',
-        audio: '/audio/demo-1.mp3',
-        tags: ['Commercial', 'Luxury', 'Elegant']
-      },
-      {
-        title: 'Social Media Ad Campaign',
-        category: 'Advertisement',
-        description: 'Dynamic and engaging voice work for viral social media advertisement.',
-        audio: '/audio/demo-2.mp3',
-        tags: ['Social Media', 'Dynamic', 'Engaging']
-      },
-      {
-        title: 'Brand Story Narration',
-        category: 'Narration',
-        description: 'Emotional and compelling brand story narration with authentic delivery.',
-        audio: '/audio/demo-3.mp3',
-        tags: ['Narration', 'Emotional', 'Storytelling']
-      },
-      {
-        title: 'Product Launch Promo',
-        category: 'Promotional',
-        description: 'Energetic and persuasive voice-over for exciting product launch.',
-        audio: '/audio/demo-4.mp3',
-        tags: ['Promo', 'Energetic', 'Persuasive']
-      }
-    ]
-
     const openLightbox = (index) => {
       currentImageIndex.value = index
       lightboxOpen.value = true
@@ -273,7 +215,6 @@ export default {
       currentImageIndex,
       modelingImages,
       socialProjects,
-      voiceProjects,
       openLightbox,
       handleImageError
     }
@@ -577,132 +518,6 @@ export default {
   }
 }
 
-// Voice Grid
-.voice-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .voice-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .voice-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
-
-.voice-card {
-  padding: 35px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  &:hover {
-    transform: translateY(-10px) scale(1.02);
-  }
-  
-  &:nth-child(odd) {
-    &:hover {
-      transform: translateY(-10px) rotate(-1deg) scale(1.02);
-    }
-  }
-  
-  &:nth-child(even) {
-    &:hover {
-      transform: translateY(-10px) rotate(1deg) scale(1.02);
-    }
-  }
-}
-
-.voice-icon {
-  font-size: 2.8rem;
-  color: #c0c0c0;
-  margin-bottom: 20px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  .voice-card:hover & {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 20px rgba(192, 192, 192, 0.6));
-  }
-}
-
-.voice-title {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-  color: #e8e8e8;
-}
-
-.voice-category {
-  color: #c0c0c0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-}
-
-.voice-description {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.audio-player {
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  padding: 8px;
-  outline: none;
-  
-  &::-webkit-media-controls-panel {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
-    border-radius: 50px;
-  }
-  
-  &::-webkit-media-controls-play-button,
-  &::-webkit-media-controls-pause-button {
-    background-color: #c0c0c0;
-    border-radius: 50%;
-  }
-  
-  &::-webkit-media-controls-current-time-display,
-  &::-webkit-media-controls-time-remaining-display {
-    color: #e8e8e8;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-  
-  &::-webkit-media-controls-timeline {
-    background: rgba(192, 192, 192, 0.3);
-    border-radius: 25px;
-    margin: 0 10px;
-  }
-  
-  &::-webkit-media-controls-volume-slider {
-    background: rgba(192, 192, 192, 0.3);
-    border-radius: 25px;
-  }
-}
-
-.voice-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: 6px 12px;
-  background: rgba(192, 192, 192, 0.2);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: #e8e8e8;
-}
 
 // CTA Section
 .cta-card {
@@ -802,8 +617,7 @@ export default {
     column-count: 1;
   }
   
-  .social-grid,
-  .voice-grid {
+  .social-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -1,6 +1,6 @@
 # Musa Hiqma Oyiza - Portfolio Website
 
-A premium, glassmorphism-style portfolio website showcasing professional modeling, social media management, and voice-over services.
+A premium, glassmorphism-style portfolio website showcasing professional modeling and social media management services.
 
 ## 🚀 Quick Start
 
@@ -16,7 +16,6 @@ npm install
 
 2. **Add your content:**
    - Place images in `public/images/` folder
-   - Place audio files in `public/audio/` folder
 
 3. **Run development server:**
 ```bash
@@ -45,8 +44,7 @@ portfolio/
 │   ├── router/index.js              # Routes
 │   └── css/app.scss                 # Global styles
 ├── public/
-│   ├── images/                      # Your images
-│   └── audio/                       # Voice-over demos
+│   └── images/                      # Your images
 └── package.json
 ```
 
@@ -69,20 +67,6 @@ public/images/
 - Compress images before uploading (use TinyPNG.com)
 - Keep under 500KB per image
 
-### Audio Files
-Place voice-over demos in `public/audio/`:
-
-```
-public/audio/
-├── Awwww.mp3.mpeg
-└── Spiderman.mp3.mpeg
-```
-
-**Audio Guidelines:**
-- Format: MP3
-- Bitrate: 128-192 kbps
-- Duration: 30-60 seconds
-- Keep under 5MB per file
 
 ## 🎨 Customization
 
@@ -135,7 +119,6 @@ Already configured in `ContactPage.vue`:
 - Fully responsive (mobile, tablet, desktop)
 - Smooth animations and transitions
 - Image gallery with lightbox
-- Audio players for voice-over demos
 - Contact form with validation
 - SEO optimized
 - Performance optimized (Lighthouse 90+)
@@ -166,10 +149,6 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-### Audio not playing
-- Use MP3 format
-- Check file paths start with `/audio/`
-- Verify files are under 10MB
 
 ## 📊 Performance Optimizations
 

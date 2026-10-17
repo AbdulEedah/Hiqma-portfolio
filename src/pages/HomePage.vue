@@ -7,9 +7,9 @@
         <div class="hero-grid">
           <div class="hero-text fade-in-up">
             <h1 class="hero-title">Musa Hiqma Oyiza</h1>
-            <p class="hero-subtitle gradient-text">Model | Social Media Manager | Voice-Over Artist</p>
+            <p class="hero-subtitle gradient-text">Model | Social Media Manager</p>
             <p class="hero-description">
-              Elevating brands through visual storytelling, strategic social growth, and expressive voice performance.
+              Elevating brands through visual storytelling, strategic social growth, and creative excellence.
             </p>
             <div class="hero-buttons">
               <q-btn
@@ -51,9 +51,9 @@
       <div class="container">
         <div class="glass-card bio-card fade-in-up">
           <p class="bio-text">
-            Hi, I'm <span class="gradient-text">Hiqma</span> — a professional model, digital brand strategist, 
-            and voice-over artist passionate about helping brands grow through visual excellence, 
-            structured social media strategy, and impactful voice expression.
+            Hi, I'm <span class="gradient-text">Hiqma</span> — a professional model and digital brand strategist 
+            passionate about helping brands grow through visual excellence, 
+            structured social media strategy, and creative storytelling.
           </p>
         </div>
       </div>
@@ -123,31 +123,6 @@
             </div>
             <h3 class="stat-value">{{ stat.value }}</h3>
             <p class="stat-label">{{ stat.label }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Voice-Over Projects -->
-    <section class="section-padding voiceover-section">
-      <div class="container">
-        <h2 class="section-title gradient-text">Voice-Over Work</h2>
-        <div class="voiceover-grid">
-          <div
-            v-for="(project, index) in voiceoverProjects"
-            :key="index"
-            class="glass-card voiceover-card fade-in-up"
-            :style="{ animationDelay: `${index * 0.1}s` }"
-          >
-            <div class="voiceover-icon">
-              <i class="fas fa-microphone"></i>
-            </div>
-            <h3 class="voiceover-title">{{ project.title }}</h3>
-            <p class="voiceover-description">{{ project.description }}</p>
-            <audio controls class="audio-player">
-              <source :src="project.audio" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
           </div>
         </div>
       </div>
@@ -263,9 +238,9 @@ export default {
         description: 'High audience awareness and interpersonal sensitivity.'
       },
       {
-        icon: 'fas fa-microphone-alt',
-        title: 'Voice-Over Performance',
-        description: 'Professional voice modulation, tone control, and expressive delivery.'
+        icon: 'fas fa-bullhorn',
+        title: 'Brand Storytelling',
+        description: 'Compelling brand narratives, creative positioning, and strategic messaging.'
       }
     ]
 
@@ -294,18 +269,7 @@ export default {
       }
     ]
 
-    const voiceoverProjects = [
-      {
-        title: 'Commercial Voice-Over',
-        description: 'Professional brand commercial with engaging tone',
-        audio: '/audio/Awwww.mp3.mpeg'
-      },
-      {
-        title: 'Social Media Ad',
-        description: 'Dynamic social media advertisement voice work',
-        audio: '/audio/Spiderman.mp3.mpeg'
-      }
-    ]
+   
 
     const openLightbox = (index) => {
       currentImageIndex.value = index
@@ -324,7 +288,7 @@ export default {
       skills,
       modelingImages,
       socialStats,
-      voiceoverProjects,
+     
       lightboxOpen,
       currentImageIndex,
       openLightbox,
@@ -641,108 +605,6 @@ export default {
   font-size: 1.1rem;
 }
 
-// Voice-Over Grid
-.voiceover-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .voiceover-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .voiceover-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.voiceover-card {
-  padding: 35px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  &:hover {
-    transform: translateY(-10px) scale(1.02);
-  }
-  
-  &:nth-child(odd) {
-    &:hover {
-      transform: translateY(-10px) rotate(-1deg) scale(1.02);
-    }
-  }
-  
-  &:nth-child(even) {
-    &:hover {
-      transform: translateY(-10px) rotate(1deg) scale(1.02);
-    }
-  }
-}
-
-.voiceover-icon {
-  font-size: 2.8rem;
-  color: #c0c0c0;
-  margin-bottom: 20px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  .voiceover-card:hover & {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 20px rgba(192, 192, 192, 0.6));
-  }
-}
-
-.voiceover-title {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #e8e8e8;
-}
-
-.voiceover-description {
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.audio-player {
-  width: 100%;
-  margin-top: 16px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  padding: 8px;
-  outline: none;
-  
-  &::-webkit-media-controls-panel {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
-    border-radius: 50px;
-  }
-  
-  &::-webkit-media-controls-play-button,
-  &::-webkit-media-controls-pause-button {
-    background-color: #c0c0c0;
-    border-radius: 50%;
-  }
-  
-  &::-webkit-media-controls-current-time-display,
-  &::-webkit-media-controls-time-remaining-display {
-    color: #e8e8e8;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-  
-  &::-webkit-media-controls-timeline {
-    background: rgba(192, 192, 192, 0.3);
-    border-radius: 25px;
-    margin: 0 10px;
-  }
-  
-  &::-webkit-media-controls-volume-slider {
-    background: rgba(192, 192, 192, 0.3);
-    border-radius: 25px;
-  }
-}
 
 // Testimonials
 .testimonial-placeholder {
@@ -908,8 +770,7 @@ export default {
   }
   
   .competencies-grid,
-  .stats-grid,
-  .voiceover-grid {
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 }
